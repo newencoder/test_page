@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background: #232b36;
+  height: 100vh;
+  position: relative;
+}
+.clip{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.martin{
+  background: url(img/martin.jpg) no-repeat center;
+  background-size: cover;
+}
+.usuk{
+  background: url(img/usuk.jpg) no-repeat center;
+  background-size: cover;
+  transition: 0.5s;
+  clip-path: polygon(0 0,100% 0, 100% 0, 0% 100%) 
+}
+.usuk:hover{
+  clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%) 
+}
+.martin:hover ~ .usuk{
+   clip-path: polygon(0 0,100% 0, 100% 0, 0 0)
+}
